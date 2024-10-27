@@ -1,12 +1,7 @@
 list_players = ["Маша", "Петя", "Саша", "Оля", "Кирилл", "Коля"]
+half = len(list_players) // 2
 
-first_team = []
-second_team = []
-for i in range(len(list_players)):
-    if i <= ((len(list_players) / 2) - 1):
-        first_team.append(list_players[i])
-    else:
-        second_team.append(list_players[i])
-
+first_team = list_players[:half]
+second_team = list_players[half:]
 print(first_team)
 print(second_team)
