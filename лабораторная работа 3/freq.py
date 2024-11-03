@@ -4,9 +4,9 @@ def count_letters(text):
     for symbol in text.lower():
         if symbol.isalpha():  # работа только с буквами
             if symbol in letters:
-                letters[symbol] += 1  # Увеличиваем счетчик для существующего ключа
+                letters[symbol] += 1
             else:
-                letters[symbol] = 1  # Инициализируем счетчик для нового ключа
+                letters[symbol] = 1
     return letters
 
 
@@ -14,8 +14,8 @@ def count_letters(text):
 def calculate_frequency(counted_letters):
     total = sum(counted_letters.values())  # Общее количество букв
     freq = {}
-    for letter in counted_letters:  # Используем только буквы
-        freq[letter] = counted_letters[letter] / total  # Считаем частоту
+    for letter in counted_letters:
+        freq[letter] = counted_letters[letter] / total
     return freq
 
 main_str = """
@@ -61,4 +61,4 @@ frequency = calculate_frequency(letters_count)
 
 # TODO Распечатайте в столбик букву и её частоту в тексте
 for letter, freq in frequency.items():
-    print(f"{letter}: {freq:.2f}") #:.2f использовал, потому что round для буквы ю давай 0.0 а не 0. 00
+    print(f"{letter}: {freq:.2f}") #:.2f использовал, потому что round в 18й строчке для буквы "ю" в выводе даёт 0.0 а не 0. 00
