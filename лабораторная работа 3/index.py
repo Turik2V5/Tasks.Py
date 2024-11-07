@@ -1,8 +1,7 @@
 # TODO Напишите функцию для поиска индекса товара
 def find_index(array, item):
-    for i in range(len(array)):
-        if array[i] == item:
-            return i
+    if item in array:
+        return array.index(item)
     else:
         return None
 
